@@ -22,11 +22,9 @@ body {
   flex-grow: 1;
 }
 
-
 .header__items, .header__divider--hidden{
   display: none;
 }
-
 
 .header__left-side{
   padding-left: 16px;
@@ -269,6 +267,5 @@ body {
     font-size: 14px;
     font-style: normal;
   }
-
 }
 
