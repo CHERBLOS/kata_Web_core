@@ -1,137 +1,128 @@
-body {
+html {
   font-family: 'TT Lakes', sans-serif;
-  min-width: 320px;
+  font-size: 16px;
+}
+
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   background-color: #F8F8F8;
 }
 
-.header__menu{
-  height: 88px;
-  width: 100%;
+.header{
+  min-height: 5.5rem;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
-  background-color: #fff;
+  border-bottom: 1px solid #D9FFF5;
+  box-sizing: border-box;
 }
 
-.header__left-side, .header__right-side{
+.header__menu{
+  margin-left: 1rem;
+}
+
+.header__menu-button{
+  margin-right: 1rem;
+}
+
+.header__actions,.header__sections, .header__operations, .header__menu{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-grow: 1;
+  padding-left: 0;
 }
 
-.header__items, .header__divider--hidden{
+.header__actions{
   display: none;
 }
 
-.header__left-side{
-  padding-left: 16px;
+.header__action, .header__operation{
+  list-style-type: none;
+  margin-right: 1rem;
 }
 
-.header__right-side{
-  margin-right: 16px;
-  max-width: 96px;
-}
-
-.header__logo{
-  margin-right: auto;
-  margin-left: 16px;
-}
-
-.header__divider{
-  margin-right: 20px;
-}
-
-.header__line-shadow{
-  border-bottom: 1px solid #D9FFF5;
-  width: 100%;
+.header__operations::before{
+  content: url(../assets/img/divider.svg);
+  margin: .25rem 1.25rem 0 .25rem;
 }
 
 /* main */
 
-.button__text{
+.button{
   font-family: 'TT Lakes';
-  white-space: nowrap;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   letter-spacing: -0.2px;
-  color: #1B1C21;
-  margin-right: 9px;
-  display: none;
-}
-
-.service__caption{
+  white-space: nowrap;
+  border: none;
+  background-color: inherit;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 24px;
-  margin-bottom: 24px;
-}
-
-.service__caption-text{
-  display: flex;
-}
-
-.service__caption-icons{
-  display: none;
-}
-
-.service__caption-icon{
-  align-items: center;
-  margin-right: 32px;
+  margin-left: 0;
   padding: 0;
 }
 
-.service__caption-heading{
-  margin: 0 0 0 12px;
+.service__caption{
   color: #1B1C21;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 1.75rem;
   line-height: 40px;
   letter-spacing: -0.6px;
+}
 
+.service__caption::before{
+  content: '';
+  border-right: 4px solid #41F6D7;
+  height: 2.5rem;
+  border-radius: 0 .25rem .25rem 0;
+  margin-right: 0.75rem;
+}
+
+.service__operations{
+  display: none;
+}
+
+.service__operation{
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.service__operation-text{
+  font-weight: 500;
+  color: #1B1C21;
+  margin-right: 9px;
 }
 
 .navigation__items{
   display: flex;
   overflow: scroll;
-  margin-left: 16px;
+  margin-left: 1rem;
+  padding-left: 0;
 }
 
 .navigation__item{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 16px;
-  height: 40px;
-}
-
-.navigation__item-text{
-  white-space: nowrap;
-  font-size: 16px;
-  line-height: 24px;
-  color: #7E7E82;
+  padding: 0 1rem;
+  height: 2.5rem;
+  text-decoration: none;
 }
 
 .navigation__item:first-child{
   box-sizing: border-box;
-  padding: 8px 16px;
+  padding: .5rem 1rem;
   background-color: #FFFFFF;
   border: 2px solid #B8FFEC;
   border-radius: 6px;
 }
 
 .service__deskription{
-  margin-top: 24px;
-}
-
-.service__deskription-items{
-  margin-left: 16px;
+  margin-top: 1.5rem;
 }
 
 .service__deskription-text{
+  font-size: .875rem;
+  margin: auto 1rem;
   letter-spacing: 0.2px;
   color: #1B1C21;
 }
@@ -142,76 +133,67 @@ body {
 }
 
 .service__button{
-  width: 132px;
-  height: 24px;
-  box-sizing: border-box;
-  margin-left: 8px;
+  font-weight: 500;
+  margin-left: 1rem;
 }
 
-.button{
-  border: none;
-  background-color: inherit;
-  display: flex;
-  margin-left: 0;
-}
-
-.service__button-text{
-  font-size: 16px;
-  line-height: 24px;  
-  letter-spacing: -0.2px;
-  color: #1B1C21;
-  white-space: nowrap;
-  margin-left: 8px;
+.service__button img{
+  margin-right: 0.5rem;
 }
 
 .service__image{
-  margin-top: 16px;
+  margin-top: 1rem;
 }
 
 @media (min-width: 768px){
-  .header__items{
-    display: flex;
-    margin-right: 20px;
+  .header__menu{
+    margin-left: 1.5rem;
   }
 
-  .header__item--hidden{
-    margin-left: 16px;
+  .header__menu::before{
+    content: url(../assets/img/divider.svg);
+    order: 1;
+    margin: .25rem 1.25rem 0 .25rem;
   }
 
-  .header__divider--hidden{
-    display: flex;
-    margin-left: 20px;
-    margin-right: 4px;
+  .header__logo{
+    order: 2;
   }
+
+  .header__sections{
+    margin-right: .5rem;
+  }
+  
+  .header__actions{
+    display: flex;
+    justify-content: flex-end;
+  }
+
   .service__caption{
-    padding-top: 24px;
-    margin-bottom: 24px;
-  }
-  .service__caption-icons{
-    display: none;
+    margin-bottom: 1.5rem;
   }
 
-  .navigation__items, .service__caption-heading{
-    margin-left: 20px;
+  .service__caption::before{
+    margin-right: 1.25rem;
+  }
+
+  .navigation__items{
+    margin-left: 1.5rem;
   }
 
   .service__navigation{
-    margin-top: 8px;
+    margin-top: .5rem;
   }
 
   .service__deskription{
-    margin-top: 8px;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
     display: flex;
     justify-content: space-between;
   }
-
-  .service__deskription-items{
-    margin-left: 24px;
-  }
   
   .service__deskription-text{
-    line-height: 20px;
-    width: 312px;
+    min-width: 19.5rem;
   }
 
   .service__deskription-p:nth-child(2){
@@ -219,29 +201,36 @@ body {
   }
 
   .service__image{
-    margin-right: 24px;
+    margin-right: 1.5rem;
   }
 }
 
 @media (min-width: 1120px){
-  .header__menu{
+  .header{
     display: none;
+  }
+
+  .service__caption-items{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.625rem;
   }
   
   .service__caption{
-    padding-top: 42px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
-  .service__caption-heading{
-    margin-left: 32px;
+  .service__caption::before{
+    margin-right: 1.875rem;
   }
 
-  .service__caption-icons{
+  .service__operations{
     display: flex;
   }
 
   .service__button{
-    margin-top: 14px;
+    margin-top: .875rem;
   }
 
   .button__text{
@@ -251,7 +240,7 @@ body {
   .navigation__items{
     overflow:hidden;
     flex-wrap: wrap;
-    margin-left: 32px;
+    margin-left: 2rem;
   }
 
   .service__deskription-p:last-child{
@@ -259,13 +248,11 @@ body {
   }
 
   .service__deskription-items{
-    margin: 0 32px;
+    margin: 0 2rem;
   }
 
   .service__deskription-text{
-    width: auto;
-    font-size: 14px;
-    font-style: normal;
+    max-width: auto;
   }
 }
 
